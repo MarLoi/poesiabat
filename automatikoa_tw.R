@@ -40,7 +40,7 @@ rstats_tweets <- search_tweets(q = "#poesiabat", n = 10)
 rstats_tweets$created_at = as.POSIXct(rstats_tweets$created_at,format="%m/%d/%Y %H:%M:%S", tz = "Europe/Paris")
 orain = as.POSIXct(Sys.time(),format="%m/%d/%Y %H:%M:%S")
 
-rstats_tweets_filt = rstats_tweets %>% filter(created_at > (Sys.time()-60000) )
+rstats_tweets_filt = rstats_tweets %>% filter(created_at > (Sys.time()-600) )
 
 for(i in 1:nrow(rstats_tweets_filt)){
 
