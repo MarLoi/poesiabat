@@ -106,8 +106,8 @@ for(i in 1:nrow(rstats_tweets_filt)){
   # TWEETA ------------------------------------------------------------------
   
   
-  #post_tweet('emaitza')
-  print(emaitza)
+  post_tweet('emaitza')
+  #print(emaitza)
 
 
 }
