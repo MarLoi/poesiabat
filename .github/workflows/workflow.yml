@@ -16,3 +16,9 @@ jobs:
         run: Rscript -e 'install.packages(c("rtweet", "tidyverse"), dependencies = TRUE)'
       - name: Create and post tweet
         run: Rscript automatikoa_tw.R
+      - name: Commit report
+        run: |
+          git config --global user.name 'MarLoi'
+          git config --global user.email 'mloizate@uoc.edu'
+          git commit -am "Automated report"
+          git push
