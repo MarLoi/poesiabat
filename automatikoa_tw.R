@@ -2,6 +2,12 @@ library(rtweet)
 library(tidyverse)
 
 
+log <- read.delim("log.txt", header = FALSE)
+azkena = as.POSIXct(log[nrow(log),])
+orain = as.POSIXct(Sys.time(),format="%m/%d/%Y %H:%M:%S")
+write(as.character(orain), file="log.txt",append=TRUE)
+
+
 # # whatever name you assigned to your created app
 # appname <- "poesiabat"
 # 
@@ -40,8 +46,8 @@ rstats_tweets <- search_tweets(q = "#poesiabat", n = 10)
 rstats_tweets$created_at = as.POSIXct(rstats_tweets$created_at,format="%m/%d/%Y %H:%M:%S", tz = "Europe/Paris")
 orain = as.POSIXct(Sys.time(),format="%m/%d/%Y %H:%M:%S")
 
-#rstats_tweets_filt = rstats_tweets %>% filter(created_at > (Sys.time()-600) )
-rstats_tweets_filt = head(rstats_tweets)
+rstats_tweets_filt = rstats_tweets %>% filter(created_at > azkena )
+#rstats_tweets_filt = head(rstats_tweets)
 
 for(i in 1:nrow(rstats_tweets_filt)){
 
@@ -107,8 +113,9 @@ for(i in 1:nrow(rstats_tweets_filt)){
   # TWEETA ------------------------------------------------------------------
   
   
-  #post_tweet('emaitza')
+  #post_tweet(emaitza)
   print(emaitza)
 
 
 }
+
