@@ -12,34 +12,34 @@ write(as.character(orain), file="log.txt",append=TRUE)
 appname <- "poesiabat"
 
 ## api key (example below is not a real key)
-key <- "2C2NmWG7kie43GW8JzA0fckjM"
-# 
+key <- "8Gl5HnGUWaKNB7D4y2Qv2rMLk"
+
 ## api secret (example below is not a real key)
-secret <- "GDxSOgk1pdV7Zk9ykPObdRK91bAmtpyppmMxgouYNq8Zq3pnPG"
-# 
+secret <- "B02LYZG7L0KH3ripaGMZr0TwM160giIFP8Xij0XO4x0yTY2vU0"
+
 twitter_token <- create_token(
   app = appname,
   consumer_key = key,
   consumer_secret = secret,
-  access_token = "1524375667365888000-ZPnskvY3ZsKJYUNwy4uIoZDQkc3eeU",
-  access_secret = "AqzctjmFaRvPq1aJI3bpGGuXGX4lwvcZplGRX0HbSOsAD")
+  access_token = "1524375667365888000-AUkxaRs1uwmOwAAu9FMbzfN2xmh82u",
+  access_secret = "EZDGMpwzeprY6yh8g6CwZ4NvMYf58WZTEZokFqBVG6zYV")
 
 
-## whatever name you assigned to your created app
-#appname <- "sareak probatzen"
-
-## api key (example below is not a real key)
-#key <- "1hFVQmG7WrtRGekqAaUz5yAWj"
-
-## api secret (example below is not a real key)
-#secret <- "dL25UesAQHuWfYpKDkgk05IdN7ZUwFbImUNN4qbw6vfbdnPZeD"
-
-#twitter_token <- create_token(
-#  app = appname,
-#  consumer_key = key,
-#  consumer_secret = secret,
-#  access_token = "2873995706-hJb5EmtpUJLOeR2BrG2F1WKEEpasynEetOIcHOE",
-#  access_secret = "RnbguBacjdDgCk5ZOZymfMzRvccvdFUYFE3QlXGa5QuLA")
+# # whatever name you assigned to your created app
+# appname <- "sareak probatzen"
+# 
+# ## api key (example below is not a real key)
+# key <- "1hFVQmG7WrtRGekqAaUz5yAWj"
+# 
+# ## api secret (example below is not a real key)
+# secret <- "dL25UesAQHuWfYpKDkgk05IdN7ZUwFbImUNN4qbw6vfbdnPZeD"
+# 
+# twitter_token <- create_token(
+#   app = appname,
+#   consumer_key = key,
+#   consumer_secret = secret,
+#   access_token = "2873995706-hJb5EmtpUJLOeR2BrG2F1WKEEpasynEetOIcHOE",
+#   access_secret = "RnbguBacjdDgCk5ZOZymfMzRvccvdFUYFE3QlXGa5QuLA")
 
 
 rstats_tweets <- search_tweets(q = "#poesiabat", n = 10)
