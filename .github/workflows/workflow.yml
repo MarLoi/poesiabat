@@ -8,7 +8,7 @@ on:
 
 jobs:
   poesiabatbot-post:
-    runs-on: macOS-11
+    runs-on: macOS-latest
     steps:
       - uses: actions/checkout@v2
       - uses: r-lib/actions/setup-r@master
