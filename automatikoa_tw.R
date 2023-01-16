@@ -47,7 +47,11 @@ rstats_tweets$created_at = as.POSIXct(rstats_tweets$created_at,format="%m/%d/%Y 
 orain = as.POSIXct(Sys.time(),format="%m/%d/%Y %H:%M:%S")
 
 rstats_tweets_filt = rstats_tweets %>% filter(created_at > azkena )
+screen_name = users_data(rstats_tweets_filt)[,'screen_name']
+rstats_tweets_filt = cbind(rstats_tweets_filt, screen_name)
+
 #rstats_tweets_filt = head(rstats_tweets)
+
 
 
 if(nrow(rstats_tweets_filt)==0){
